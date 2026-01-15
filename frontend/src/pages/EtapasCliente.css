@@ -1,0 +1,75 @@
+.etapas-wrap {
+  display: grid;
+  gap: 14px;
+}
+
+.etapas-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.etapas-title {
+  margin: 0;
+}
+
+.etapas-subtitle {
+  margin-top: 4px;
+  font-size: 13px;
+  opacity: 0.8;
+}
+
+.etapas-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(260px, 1fr));
+  gap: 12px;
+}
+
+@media (max-width: 900px) {
+  .etapas-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.etapa-card {
+  border: 0;
+  border-radius: 14px;
+  padding: 14px 16px;
+  text-align: left;
+  cursor: pointer;
+  color: #fff;
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.12);
+}
+
+.etapa-card.unlocked {
+  background: linear-gradient(90deg, #0b5a6a, #2fb8aa);
+}
+
+.etapa-card.locked {
+  background: #9ca3af; /* cinza */
+  cursor: not-allowed;
+  box-shadow: none;
+  opacity: 0.85;
+}
+
+.etapa-card.locked:hover {
+  filter: none;
+}
+
+.etapa-num {
+  font-weight: 800;
+  opacity: 0.95;
+}
+
+.etapa-title {
+  font-size: 16px;
+  font-weight: 900;
+  margin-top: 6px;
+}
+
+.etapa-desc {
+  margin-top: 6px;
+  font-size: 12px;
+  opacity: 0.95;
+}

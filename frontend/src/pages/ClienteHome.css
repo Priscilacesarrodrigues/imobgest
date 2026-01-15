@@ -1,0 +1,277 @@
+/* Fundo fixo (menos cansativo) */
+.ig-page {
+  min-height: 100vh;
+  background: #eef2f5;
+  font-family: Arial, sans-serif;
+}
+
+/* Faixa superior fixa (mesma família de cor dos botões) */
+.ig-topbar {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+
+  height: 30px;
+  padding: 10px 15px;
+
+  background: linear-gradient(90deg, #0b5a6a, #2fb8aa);
+  color: #fff;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+}
+
+.ig-topbar-left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.ig-user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.ig-user-name {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1;
+}
+
+/* Botões de ícone no topo (menu + sair) */
+.ig-icon-btn {
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+  padding: 7px 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.ig-icon-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.ig-logout {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Mini menu */
+.ig-menu {
+  position: relative;
+}
+
+.ig-menu-flyout {
+  position: absolute;
+  top: 38px;                 /* ajustado para sua faixa */
+  right: 0;                  /* abre para dentro da tela */
+  width: 180px;
+
+  background: #ffffff;
+  color: #1f2937;
+
+  border-radius: 12px;
+  border: 1px solid #e5e7eb; /* garante visibilidade */
+
+  z-index: 9999;             /* FATOR CRÍTICO */
+
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
+}
+
+
+/* FORÇA os itens aparecerem dentro do balão */
+.ig-menu-flyout .ig-menu-item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+
+  width: 100%;
+  padding: 12px 14px;
+
+  background: transparent;
+  border: 0;
+
+  text-align: center;
+
+  color: #111827 !important;
+  font-size: 14px;
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+
+.ig-menu-flyout .ig-menu-item:hover {
+  background: #f3f4f6;
+}
+
+
+.ig-menu-item:hover {
+  background: #f3f4f6;
+}
+
+/* Direita: logo + título */
+.ig-topbar-right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.ig-logo {
+  height: 60px;
+  width: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 3px 8px rgba(0, 0, 0, 0.92));
+}
+
+.ig-subtitle {
+  font-size: 16px;
+  opacity: 0.95;
+  font-weight: 700;
+}
+
+/* Conteúdo */
+.ig-content {
+  padding: 18px;
+}
+
+.ig-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Botões principais */
+.ig-actions {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.ig-actions.secondary {
+  margin-bottom: 16px;
+}
+
+/* Mantém as cores dos botões (teal) */
+.ig-btn-primary {
+  border: none;
+  padding: 12px 16px;
+  border-radius: 12px;
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+  background: linear-gradient(90deg, #0b5a6a, #2fb8aa);
+}
+
+.ig-btn-primary:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.ig-btn-primary:hover:not(:disabled) {
+  filter: brightness(1.03);
+}
+
+/* Botão outline (Abrir) */
+.ig-btn-outline {
+  border: 1px solid #0b5a6a;
+  background: #fff;
+  color: #0b5a6a;
+  padding: 10px 14px;
+  border-radius: 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.ig-btn-outline:hover {
+  background: #f6fbfb;
+}
+
+/* Card */
+.ig-card {
+  background: #fff;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  padding: 14px;
+}
+
+.ig-card-title {
+  margin: 0 0 10px 0;
+}
+
+.ig-list {
+  display: grid;
+  gap: 10px;
+}
+
+.ig-list-item {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 12px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ig-id {
+  font-weight: 800;
+}
+
+.ig-muted {
+  font-size: 12px;
+  opacity: 0.7;
+}
+
+/* Erro */
+.ig-error {
+  margin-bottom: 12px;
+  padding: 10px;
+  border: 1px solid #f5c2c7;
+  background: #f8d7da;
+  border-radius: 10px;
+}
+/* ================================
+   PADRÃO GLOBAL DE HOVER (DEGRADÊ VERMELHO)
+   ================================ */
+
+/* Botões principais */
+.ig-btn-primary:hover:not(:disabled) {
+  background: linear-gradient(90deg, #991b1b, #ef4444) !important;
+  color: #ffffff;
+}
+
+/* Botão outline */
+.ig-btn-outline:hover {
+  background: linear-gradient(90deg, #991b1b, #ef4444);
+  border-color: #ef4444;
+  color: #ffffff;
+}
+
+/* Botões de ícone (perfil / sair) */
+.ig-icon-btn:hover {
+  background: linear-gradient(90deg, #991b1b, #ef4444);
+  border-color: #ef4444;
+  color: #ffffff;
+}
+
+/* Itens do menu flutuante */
+.ig-menu-flyout .ig-menu-item:hover {
+  background: linear-gradient(90deg, #991b1b, #ef4444);
+  color: #ffffff !important;
+}
+
+/* Suaviza transições em todo o sistema */
+.ig-btn-primary,
+.ig-btn-outline,
+.ig-icon-btn,
+.ig-menu-flyout .ig-menu-item {
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}

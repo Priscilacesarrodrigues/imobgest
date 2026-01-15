@@ -1,0 +1,140 @@
+:root{
+  --verde-agua: #2EC4B6;
+  --azul: #0B4F6C;
+  --dourado: #D4AF37;
+
+  --bg: #F6F8FB;
+  --card: #FFFFFF;
+  --text: #0F172A;
+  --muted: #64748B;
+  --border: #E5E7EB;
+}
+
+.login-page{
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background:
+    radial-gradient(1200px 600px at 20% 10%, rgba(46,196,182,0.18), transparent 60%),
+    radial-gradient(900px 500px at 90% 20%, rgba(11,79,108,0.18), transparent 55%),
+    radial-gradient(800px 500px at 60% 90%, rgba(212,175,55,0.12), transparent 60%),
+    var(--bg);
+  font-family: Arial, sans-serif;
+}
+
+.login-card{
+  width: 100%;
+  max-width: 620px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 16px 50px rgba(2, 6, 23, 0.10);
+}
+
+.login-topbar{
+  height: 8px;
+  background: linear-gradient(90deg, var(--verde-agua), var(--azul), var(--dourado));
+}
+
+.login-content{
+  padding: 30px 32px 26px 32px;
+}
+
+.brand{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.brand img{
+  width: 100px;
+  height: 90px;
+  object-fit: contain;
+}
+
+.brand-title{
+  line-height: 1.1;
+}
+
+.brand-title h1{
+  margin: 0;
+  font-size: 22px;
+  color: var(--azul);
+}
+
+.brand-title p{
+  margin: 2px 0 0 0;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.field{
+  display: grid;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+label{
+  font-size: 12px;
+  color: var(--muted);
+}
+
+input{
+  width: 95%;
+  padding: 14px 14px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  outline: none;
+  font-size: 14px;
+}
+
+input:focus{
+  border-color: rgba(46,196,182,0.8);
+  box-shadow: 0 0 0 4px rgba(46,196,182,0.18);
+}
+
+.actions{
+  margin-top: 6px;
+  display: grid;
+  gap: 10px;
+}
+
+button{
+  width: 100%;
+  padding: 14px 14px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 14px;
+  background: linear-gradient(135deg, var(--azul), var(--verde-agua));
+  color: white;
+}
+
+button:hover{
+  filter: brightness(1.03);
+}
+
+.small-note{
+  margin-top: 10px;
+  font-size: 12px;
+  color: var(--muted);
+  text-align: center;
+}
+
+.small-note b{
+  color: var(--dourado);
+}
+
+.error{
+  margin: 6px 0 0 0;
+  color: #b91c1c;
+  font-size: 12px;
+  background: #fee2e2;
+  border: 1px solid #fecaca;
+  padding: 8px 10px;
+  border-radius: 10px;
+}
