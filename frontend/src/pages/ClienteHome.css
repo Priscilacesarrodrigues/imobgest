@@ -14,7 +14,7 @@
   height: 30px;
   padding: 10px 15px;
 
-  background: linear-gradient(90deg, #0b5a6a, #2fb8aa);
+  background: linear-gradient(90deg, #0E6F95, #33B7E6);
   color: #fff;
 
   display: flex;
@@ -159,7 +159,7 @@
   margin-bottom: 16px;
 }
 
-/* Mantém as cores dos botões (teal) */
+/* Mantém as cores dos botões (agora azul do logo) */
 .ig-btn-primary {
   border: none;
   padding: 12px 16px;
@@ -167,7 +167,7 @@
   color: #fff;
   font-weight: 700;
   cursor: pointer;
-  background: linear-gradient(90deg, #0b5a6a, #2fb8aa);
+  background: linear-gradient(90deg, #0E6F95, #33B7E6);
 }
 
 .ig-btn-primary:disabled {
@@ -181,9 +181,9 @@
 
 /* Botão outline (Abrir) */
 .ig-btn-outline {
-  border: 1px solid #0b5a6a;
+  border: 1px solid #0E6F95;
   background: #fff;
-  color: #0b5a6a;
+  color: #0E6F95;
   padding: 10px 14px;
   border-radius: 12px;
   font-weight: 700;

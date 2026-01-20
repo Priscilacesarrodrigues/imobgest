@@ -3,6 +3,14 @@
   gap: 14px;
 }
 
+.etapas-topbar{
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 14px;
+  margin-bottom: 16px;
+}
+
 .etapas-header {
   display: flex;
   align-items: flex-start;
@@ -15,9 +23,32 @@
 }
 
 .etapas-subtitle {
-  margin-top: 4px;
+  margin-top: 6px;
   font-size: 13px;
-  opacity: 0.8;
+  opacity: 0.85;
+}
+
+.etapas-back{
+  width: auto !important;
+  height: 42px;
+  padding: 0 14px;
+  border-radius: 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  flex: 0 0 auto;
+  white-space: nowrap;
+  align-self: flex-start;
+}
+
+.etapas-refresh{
+  width: auto !important;
+  height: 42px;
+  padding: 0 18px;
+  border-radius: 12px;
+  flex: 0 0 auto;
+  white-space: nowrap;
+  align-self: flex-start;
 }
 
 .etapas-grid {
@@ -40,10 +71,13 @@
   cursor: pointer;
   color: #fff;
   box-shadow: 0 10px 22px rgba(0, 0, 0, 0.12);
+
+  /* 🔹 PADRONIZA FONTE */
+  font-family: inherit;
 }
 
 .etapa-card.unlocked {
-  background: linear-gradient(90deg, #0b5a6a, #2fb8aa);
+  background: linear-gradient(90deg, #0E6F95, #33B7E6);
 }
 
 .etapa-card.locked {
@@ -72,4 +106,69 @@
   margin-top: 6px;
   font-size: 12px;
   opacity: 0.95;
+}
+
+.etapa-status-wrap{
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+/* badge do status */
+.etapa-status{
+  font-size: 12px;
+  font-weight: 800;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.18);
+}
+
+/* tooltip */
+.etapa-tooltip{
+  position: absolute;
+  top: 50%;
+  left: calc(100% + 12px); /* joga para a direita */
+  transform: translateY(-50%);
+  background: rgba(10, 10, 10, 0.92);
+  color: #fff;
+  padding: 10px 12px;
+  border-radius: 10px;
+  font-size: 12px;
+  line-height: 1.2;
+  white-space: nowrap;
+  box-shadow: 0 10px 22px rgba(0,0,0,0.25);
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.15s ease;
+  z-index: 10;
+}
+
+/* setinha apontando para o status */
+.etapa-tooltip::after{
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -8px;
+  transform: translateY(-50%);
+  border-width: 8px 8px 8px 0;
+  border-style: solid;
+  border-color: transparent rgba(10, 10, 10, 0.92) transparent transparent;
+}
+
+/* aparece no hover do card bloqueado */
+.etapa-card.locked:hover .etapa-tooltip{
+  opacity: 1;
+}
+
+/* vira coluna: título em cima, status embaixo */
+.etapa-col{
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* status embaixo alinhado à esquerda */
+.etapa-status-wrap.abaixo{
+  margin-top: 4px;
 }

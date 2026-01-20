@@ -1,0 +1,253 @@
+/* ==========================
+   ETAPA 1 - PROPOSTA (CSS)
+   ========================== */
+
+/* superficie do formulário (fundo suave + borda sutil dourada) */
+.p1-surface {
+  border-radius: 18px;
+  border: 1px solid rgba(212, 175, 55, 0.28);
+  background:
+    radial-gradient(900px 500px at 15% 10%, rgba(212, 175, 55, 0.12), transparent 60%),
+    radial-gradient(900px 500px at 85% 20%, rgba(14, 111, 149, 0.10), transparent 55%),
+    #ffffff;
+  box-shadow: 0 14px 36px rgba(2, 6, 23, 0.08);
+  padding: 18px;
+}
+
+/* topo da página */
+.p1-topbar {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 12px;
+  align-items: start;
+  margin-bottom: 14px;
+}
+
+.p1-head {
+  text-align: center;
+}
+
+.p1-title {
+  margin: 0;
+  font-size: 26px;
+  font-weight: 900;
+  letter-spacing: 0.2px;
+  color: #0f172a; /* azul bem escuro */
+}
+
+.p1-sub {
+  margin-top: 6px;
+  font-size: 14px;
+  opacity: 0.85;
+  color: #1f2937;
+}
+
+.p1-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+
+/* mensagens */
+.p1-info {
+  margin-bottom: 12px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(34, 197, 94, 0.25);
+  background: rgba(34, 197, 94, 0.08);
+  font-weight: 800;
+}
+
+/* grid geral (cards/sessões) */
+.p1-form {
+  display: grid;
+  gap: 14px;
+}
+
+/* sessão/card */
+.p1-section {
+  border-radius: 14px;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.92);
+}
+
+.p1-section-head {
+  padding: 14px 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background: linear-gradient(
+    90deg,
+    rgba(212, 175, 55, 0.12),
+    rgba(51, 183, 230, 0.10)
+  );
+  border-bottom: 1px solid rgba(15, 23, 42, 0.06);
+}
+
+.p1-section-title {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 900;
+  color: #0f172a;
+}
+
+.p1-section-body {
+  padding: 14px;
+}
+
+/* grid dos campos */
+.p1-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(260px, 1fr));
+  gap: 12px;
+}
+
+@media (max-width: 980px) {
+  .p1-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.p1-span2 {
+  grid-column: span 2;
+}
+
+@media (max-width: 980px) {
+  .p1-span2 {
+    grid-column: span 1;
+  }
+}
+
+/* labels e inputs maiores */
+.p1-label {
+  font-size: 14px;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 6px;
+}
+
+.p1-input,
+.p1-select,
+.p1-textarea {
+  width: 100%;
+  border: 1px solid rgba(15, 23, 42, 0.14);
+  border-radius: 12px;
+  background: #fff;
+  padding: 10px 12px;
+  font-size: 15px;
+  color: #0f172a;
+  outline: none;
+}
+
+.p1-textarea {
+  min-height: 90px;
+  resize: vertical;
+}
+
+.p1-input:focus,
+.p1-select:focus,
+.p1-textarea:focus {
+  border-color: rgba(14, 111, 149, 0.55);
+  box-shadow: 0 0 0 4px rgba(51, 183, 230, 0.14);
+}
+
+/* inline (checkbox + input juntos) */
+.p1-inline {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.p1-check {
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+  font-size: 14px;
+  color: #334155;
+  font-weight: 700;
+}
+
+/* bloco endereço */
+.p1-address-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+@media (max-width: 980px) {
+  .p1-address-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.p1-note {
+  margin-top: 8px;
+  font-size: 13px;
+  color: #334155;
+  opacity: 0.9;
+}
+
+/* repetidor (campos 1 por linha + botão +) */
+.p1-repeat {
+  display: grid;
+  gap: 8px;
+}
+
+.p1-repeat-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 8px;
+  align-items: center;
+}
+
+.p1-remove {
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  border: 1px solid rgba(15, 23, 42, 0.14);
+  background: #fff;
+  color: #0f172a;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.p1-remove:hover {
+  filter: brightness(0.98);
+}
+
+.p1-addline {
+  width: fit-content;
+  padding: 8px 10px;
+  border-radius: 10px;
+  border: 1px dashed rgba(14, 111, 149, 0.45);
+  background: rgba(51, 183, 230, 0.08);
+  color: #0f172a;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.p1-addline:hover {
+  filter: brightness(1.02);
+}
+
+/* resumo */
+.p1-summary {
+  display: grid;
+  gap: 6px;
+  font-size: 14px;
+  color: #0f172a;
+}
+
+.p1-summary b {
+  color: #0b2f3d;
+}
+
+/* mini ajuste p/ botões do layout */
+.p1-topbar .ig-btn-outline,
+.p1-topbar .ig-btn-primary {
+  min-width: 150px;
+}

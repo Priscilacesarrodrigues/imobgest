@@ -11,11 +11,15 @@
   will-change: filter;
   transition: filter 300ms;
 }
+
+/* hover ajustado para azul claro do sistema */
 .logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+  filter: drop-shadow(0 0 2em #33B7E6aa);
 }
+
+/* react logo usando variação mais escura do azul */
 .logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+  filter: drop-shadow(0 0 2em #0E6F95aa);
 }
 
 @keyframes logo-spin {

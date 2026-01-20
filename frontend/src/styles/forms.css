@@ -1,0 +1,203 @@
+/* ======================================================
+   IG FORMS — VISUAL "BLOCOS" + FUNDO DOURADO SUTIL
+   Inspirado no exemplo enviado
+   ====================================================== */
+
+/* Wrapper do formulário (plano de fundo sutil dourado) */
+.ig-form-surface {
+  background:
+    radial-gradient(900px 520px at 20% 10%, rgba(212,175,55,0.14), transparent 60%),
+    radial-gradient(780px 460px at 85% 30%, rgba(51,183,230,0.10), transparent 55%),
+    linear-gradient(180deg, rgba(212,175,55,0.06), rgba(255,255,255,0.00));
+  border: 1px solid rgba(212,175,55,0.18);
+  border-radius: 18px;
+  padding: 18px;
+}
+
+/* título geral da tela (mais elegante, escuro) */
+.ig-page-title {
+  margin: 0;
+  color: #0f172a;
+  font-weight: 900;
+}
+
+/* subtítulo */
+.ig-page-sub {
+  margin-top: 6px;
+  font-size: 13px;
+  color: rgba(15, 23, 42, 0.72);
+  font-weight: 700;
+}
+
+/* Subcards/seções internas */
+.ig-section {
+  background: rgba(255,255,255,0.86);
+  border: 1px solid rgba(15, 23, 42, 0.10);
+  border-radius: 16px;
+  box-shadow: 0 12px 26px rgba(2, 6, 23, 0.08);
+  overflow: hidden;
+}
+
+/* Cabeçalho da seção com faixa sutil (dourado + azul) */
+.ig-section-head {
+  padding: 12px 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(
+    90deg,
+    rgba(212,175,55,0.20),
+    rgba(51,183,230,0.10),
+    rgba(255,255,255,0.0)
+  );
+  border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+}
+
+.ig-section-title {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 900;
+  color: #0f172a;
+}
+
+.ig-section-body {
+  padding: 14px;
+}
+
+/* Grid padrão dentro das seções */
+.ig-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(260px, 1fr));
+  gap: 14px;
+}
+
+.ig-span-2 {
+  grid-column: span 2;
+}
+
+@media (max-width: 900px) {
+  .ig-form-grid {
+    grid-template-columns: 1fr;
+  }
+  .ig-span-2 {
+    grid-column: auto;
+  }
+}
+
+/* Campo */
+.ig-field {
+  display: grid;
+  gap: 8px;
+}
+
+/* Labels escuros (azul quase preto) */
+.ig-label {
+  font-size: 12px;
+  font-weight: 900;
+  color: rgba(15, 23, 42, 0.78);
+  letter-spacing: 0.2px;
+}
+
+/* Inputs mais “premium” */
+.ig-input,
+.ig-select,
+.ig-textarea {
+  width: 100%;
+  padding: 12px 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(15, 23, 42, 0.14);
+  background: rgba(255,255,255,0.92);
+  color: #0f172a;
+  outline: none;
+  font-size: 14px;
+
+  box-shadow:
+    0 1px 0 rgba(2, 6, 23, 0.04),
+    inset 0 0 0 1px rgba(255,255,255,0.35);
+
+  transition: border-color 0.15s ease, box-shadow 0.15s ease, transform 0.08s ease;
+}
+
+.ig-input:hover,
+.ig-select:hover,
+.ig-textarea:hover {
+  border-color: rgba(51,183,230,0.45);
+  box-shadow:
+    0 0 0 3px rgba(51,183,230,0.08),
+    0 12px 18px rgba(2, 6, 23, 0.06);
+}
+
+/* Foco com azul do sistema */
+.ig-input:focus,
+.ig-select:focus,
+.ig-textarea:focus {
+  border-color: rgba(51,183,230,0.95);
+  box-shadow:
+    0 0 0 4px rgba(51,183,230,0.18),
+    0 14px 22px rgba(2, 6, 23, 0.10);
+}
+
+/* Textarea */
+.ig-textarea {
+  min-height: 96px;
+  resize: vertical;
+}
+
+/* Inline */
+.ig-inline {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* Checkbox */
+.ig-check {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: rgba(15, 23, 42, 0.70);
+  font-weight: 900;
+}
+
+.ig-check input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+}
+
+/* Endereço (como “quadradinhos”) */
+.ig-address-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(120px, 1fr));
+  gap: 10px;
+}
+
+@media (max-width: 900px) {
+  .ig-address-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Nota/Prévia */
+.ig-note {
+  margin-top: 10px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px dashed rgba(212,175,55,0.35);
+  background: rgba(212,175,55,0.10);
+  color: rgba(15, 23, 42, 0.78);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+/* Mensagem informativa bonita */
+.ig-info {
+  margin-bottom: 12px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(51,183,230,0.35);
+  background: rgba(51,183,230,0.12);
+  color: #0e6f95;
+  font-weight: 900;
+}

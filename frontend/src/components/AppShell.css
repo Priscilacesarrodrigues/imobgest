@@ -13,8 +13,8 @@
   height: 86px;
   padding: 12px 18px;
 
-  /* mesma “família” de cor dos botões (teal) */
-  background: linear-gradient(90deg, #0b5a6a, #2fb8aa);
+  /* Atualizado: azul claro do logo (mesmo formato de degradê) */
+  background: linear-gradient(90deg, #0E6F95, #33B7E6);
   color: #fff;
 
   display: flex;

@@ -1,6 +1,7 @@
 :root{
-  --verde-agua: #2EC4B6;
-  --azul: #0B4F6C;
+  /* Atualizado: substitui o "verde água" pelo azul claro do logo (mantendo compatibilidade de nome) */
+  --verde-agua: #33B7E6; /* azul claro */
+  --azul: #0E6F95;       /* azul mais escuro para o degradê */
   --dourado: #D4AF37;
 
   --bg: #F6F8FB;
@@ -16,8 +17,8 @@
   place-items: center;
   padding: 24px;
   background:
-    radial-gradient(1200px 600px at 20% 10%, rgba(46,196,182,0.18), transparent 60%),
-    radial-gradient(900px 500px at 90% 20%, rgba(11,79,108,0.18), transparent 55%),
+    radial-gradient(1200px 600px at 20% 10%, rgba(51,183,230,0.18), transparent 60%),
+    radial-gradient(900px 500px at 90% 20%, rgba(14,111,149,0.18), transparent 55%),
     radial-gradient(800px 500px at 60% 90%, rgba(212,175,55,0.12), transparent 60%),
     var(--bg);
   font-family: Arial, sans-serif;
@@ -92,8 +93,8 @@ input{
 }
 
 input:focus{
-  border-color: rgba(46,196,182,0.8);
-  box-shadow: 0 0 0 4px rgba(46,196,182,0.18);
+  border-color: rgba(51,183,230,0.8);
+  box-shadow: 0 0 0 4px rgba(51,183,230,0.18);
 }
 
 .actions{
